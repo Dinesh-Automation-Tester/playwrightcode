@@ -1,0 +1,6 @@
+127.0.0.1 localhost
+127.0.0.1 avro-db
+127.0.0.1 local-gcp
+127.0.0.1 local-bigquery
+127.0.0.1 local-storage
+127.0.0.1 pubsub.googleapis.com

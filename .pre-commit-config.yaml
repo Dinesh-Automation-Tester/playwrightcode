@@ -1,0 +1,63 @@
+repos:
+  - repo: meta
+    hooks:
+      - id: identity
+
+  - repo: local
+    hooks:
+      - id: check_user_git_config.sh
+        name: Check git config
+        language: script
+        entry: ./infrastructure/precommit-hooks/check_user_git_config.sh
+      - id: check-properties-files
+        name: Check application.properties and application-local.properties for violations
+        entry: ./infrastructure/precommit-hooks/check_properties_files.py
+        language: script
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+        args: [ --maxkb=300 ]
+        exclude: ^applications/web/ui/public/styles/spark.katana.min.css$
+      - id: check-symlinks
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: no-commit-to-branch
+        name: Don't commit to develop or release branches directly, use pull requests
+        args: [ --branch, develop, --pattern, release/.* ]
+      - id: mixed-line-ending
+        args: [ --fix=lf ]
+      - id: check-yaml
+        args: [ --allow-multiple-documents ]
+        exclude: |
+          (?x)^(
+            b42/mkdocs.yml |
+          )
+      - id: check-xml
+      - id: check-json
+        exclude: ^applications/interfaces/src/moduleTest/resources/dataset/datahub_events/invalid
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.28.1
+    hooks:
+      - id: markdownlint
+        args:
+          - --config=./infrastructure/precommit-hooks/.markdownlint.yaml
+          - --ignore=**/_docs_/*.md
+
+  - repo: https://github.com/gitpod-io/pre-commit-hooks
+    rev: "2.1.5"
+    hooks:
+      - id: forbid-binary
+        exclude: |
+          (?x)^(.*\.(jpg|jpeg|gif|png|bmp|ico|tiff|tif|svg|eot|woff|woff2|ttf|otf)
+          )$
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.7.3
+    hooks:
+      - id: ruff # Run linter
+        files: ^analytics/
+      - id: ruff-format  # Run formatter
+        files: ^analytics/

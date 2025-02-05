@@ -1,0 +1,57 @@
+CODEOWNERS.toplevel.subdirectory_overrides disable
+CODEOWNERS.destination_branch_pattern develop
+CODEOWNERS.destination_branch_pattern release/*
+CODEOWNERS.toplevel.auto_unapprove_on_change enable
+
+@@@UlamTeam @Maciej-Wajdzik_sabre @Tomasz-Piskorski_sabre @Grzegorz-Rozanski_sabre @Marcel-Szymski-ctr_sabre @Kamil-Mandas-ctr_sabre
+@@@DevOpsTeam @David-Lambert_sabre
+@@@DatabaseTeam @Efrain-Lopez_sabre @Usaamah-Ahmed_sabre @Maciej-Wajdzik_sabre @Tomasz-Piskorski_sabre @Grzegorz-Rozanski_sabre @Marcel-Szymski-ctr_sabre @Kamil-Mandas-ctr_sabre
+@@@Architecture @Maciej-Wajdzik_sabre @Tomasz-Piskorski_sabre
+
+@@@CopernicusTeam @Krzysztof-Szewczyk-ctr_sabre @Michal-Leszczynski-ctr_sabre @Kamil-Szot-ctr_sabre @Maciej-Bosak-ctr_sabre @Elzbieta-Bukowska-ctr_sabre @Adam-Maroszek-ctr_sabre @Bartlomiej-Kirejczyk-ctr_sabre
+@@@HeisenbergTeam @Slawomir-Hurnik_sabre @Nimisha-Mishra_sabre @Oskar-Siorek_sabre @Tomasz-Marczak-ctr_sabre @Kacper-Gluszak_sabre @Mateusz-Poweska_sabre @Lukasz-Galeziowski-ctr_sabre @Kacper-Szalwa_sabre
+@@@ChanakyaTeam @Ramachandran-Krishnan_sabre @Ishwar-Nagathan_sabre @Ajay-Biswal_sabre  @Abhishek-Srivastava_sabre @Sarita-Namdev-ctr_sabre
+@@@MaxwellTeam @Kamil-Dzielinski-ctr_sabre @Stanislav-Lysunenko_sabre @Kacper-Gluszak_sabre @Wojciech-Inglot_sabre @Kacper-Szalwa_sabre @Krzysztof-Waclawik_sabre
+@@@LABS @Tiziano-Parriani_sabre @Rajeev-Bellubbi_sabre @Carlo-DelCastello_sabre @Ryan-Acosta_sabre @Chakravut-Benjadol_sabre
+@@@E2EReviewers @Maciej-Wajdzik_sabre @Kamil-Mandas-ctr_sabre @Kamil-Dzielinski-ctr_sabre
+@@@HubbleTeam @Balaji-Balaji_sabre @Tomasz-Szkodzinski_sabre @Fernando-Galeano_sabre @Kaiser-Perwez-ctr_sabre @Sachin-Gupta-ctr_sabre @Sarath-Kumar-ctr_sabre @Ben-SheridanEdwards-ctr_sabre @Umesh-Dewangan-ctr_sabre
+
+@@@SahaTeam @Murat-Demir-ctr_sabre @Thangaraj-Sengoden_sabre @AmanKumar-Singh-ctr_sabre @Rajamani-Karunanithi1-ctr_sabre @Ashik-Shaji-ctr_sabre
+
+@@@FeatureTeams @@CopernicusTeam @@HeisenbergTeam @@ChanakyaTeam @@MaxwellTeam
+
+/.github/ @@UlamTeam
+/ci/ @@UlamTeam
+/gradle/ @@UlamTeam
+/configuration/ @@UlamTeam
+/deployment/ @@UlamTeam
+/infrastructure/ @@UlamTeam
+/acceptance-tests/ @@E2EReviewers
+
+/applications-components/domain-contracts/src/ @@FeatureTeams
+/applications-components/infrastructure-clouds/ @@UlamTeam
+/infrastructure/database/ @@DatabaseTeam
+/applications/interfaces/ @@ChanakyaTeam @@CopernicusTeam
+/applications/network-processor/ @@HeisenbergTeam
+/applications/optimizer/ @@CopernicusTeam
+/applications/web/ui/ @@HubbleTeam
+/applications/web/api/ @@SahaTeam
+
+/applications/interfaces/src/test/groovy/com/sabre/cro/interfaces/ArchitectureTest.groovy @@Architecture
+/applications/network-processor/src/test/groovy/com/sabre/cro/networkprocessor/ArchitectureTest.groovy @@Architecture
+/applications-components/domain-contracts/src/test/groovy/com/sabre/cro/libraries/domain/ArchitectureTest.groovy @@Architecture
+/applications/optimizer/src/test/groovy/com/sabre/cro/optimizer_orchestrator/ArchitectureTest.groovy @@Architecture
+/applications/scheduler/src/test/groovy/com/sabre/cro/scheduler/ArchitectureTest.groovy @@Architecture
+/applications/web/api/src/test/groovy/com/sabre/cro/web_api/ArchitectureTest.groovy @@Architecture
+
+/infrastructure/precommit-hooks/ @@Architecture
+/.pre-commit-config.yaml @@Architecture
+
+/b42/content/architecture/schemas/LABS/ @@LABS @@CopernicusTeam
+/b42/content/architecture/blueprint/forecasting/ @@LABS @@CopernicusTeam
+/b42/content/architecture/blueprint/optimizer-orchestrator/ @@LABS @@CopernicusTeam
+/b42/content/architecture/blueprint/datalake/ @@LABS @@CopernicusTeam
+
+./CODEOWNERS.sabre @@UlamTeam
+
+OverallCheck(1)

@@ -1,0 +1,55 @@
+# IntelliJ
+*.iml
+## Ignore everything in .idea folder
+.idea/
+## Except for .idea/codeStyles
+!.idea/codeStyles/
+#
+
+# Mac OS
+.DS_Store
+/.DS_Store/
+#
+
+# Gradle
+.gradle
+gradle-wrapper.jar
+gradlew
+gradlew.bat
+#
+
+# Build
+build
+dist
+out
+classes
+node_modules
+/applications/optimizer/src/integrationTest/outputData/
+#
+
+# e2e
+generators_input.zip
+/acceptance-tests/e2e/outputs/
+/acceptance-tests/e2e/generators_input/
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfstate.backup
+#
+
+# drawio
+*.bkp
+*.dtmp
+#
+
+# SonarScanner
+.scannerwork
+#
+
+# Python
+*.pyc
+__pycache__
+#
